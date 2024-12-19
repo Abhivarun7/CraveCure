@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+  /* Main Canvas Styling */
+.main-canvas {
+    margin-top: 20px; /* Space below navbar */
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* Adjust height minus navbar height */
+    background-color: #ffffff; /* White background for the main content */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 1200px; /* Content width limit */
+    margin-left: auto;
+    margin-right: auto; /* Center the canvas */
+  }
+
+  .second-main-canvas {
+    width: 90%;
+    height: 90%;
+    border: 2px solid black;
+    display: flex; /* Changed from block to flex */
+    justify-content: center; /* Centers horizontally */
+    align-items: center; /* Centers vertically */
+    margin: auto; /* Centers the canvas itself in its parent container */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-canvas {
+      padding: 15px;
+      margin-top: 15px;
+      border-radius: 5px; /* Slightly smaller radius for smaller screens */
+    }
+  }

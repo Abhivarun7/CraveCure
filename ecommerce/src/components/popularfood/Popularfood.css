@@ -1,0 +1,135 @@
+/* Base Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Popular Food Section */
+.popular-food {
+  padding: 0px 100px;
+  background-color: #ffffff; /* Light background */
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: #0b0c10;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* Categories */
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.restaurants-nearby{
+  gap: 200px;
+  width: 100%;
+  flex: 1 1 calc(100% - 0px); 
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+}
+/* Each Category */
+.category {
+  flex: 1 1 calc(30% - 20px); /* Flexible cards with responsive sizing */
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* Category Title */
+.category-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333333;
+}
+
+/* Food Items */
+.food-items {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 columns on large screens */
+  grid-auto-rows: 1fr; /* Ensure consistent height for items */
+  gap: 20px; /* Spacing between items */
+  max-height: calc(2 * 220px + 20px); /* Limit height to 2 rows with spacing */
+  overflow-x: auto; /* Make the container horizontally scrollable if items overflow */
+  justify-content: center; /* Center items */
+  padding: 10px;
+}
+
+/* Food Card */
+.food-card {
+  background-color: #ffffff;
+  border: 1px solid #f5f1f1;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.food-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Food Image */
+.food-image {
+  width: 100px; /* Fixed width */
+  height: 100px; /* Fixed height */
+  object-fit: contain;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Food Name */
+.food-name {
+  font-size: 14px;
+  color: #0b0c10;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; /* Prevent wrapping */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for long text */
+}
+
+/* Media Query for Mobile */
+@media (max-width: 1200px) {
+  .food-items {
+    grid-template-columns: repeat(4, 1fr); /* 4 columns on mobile */
+  }
+  
+  .food-card {
+    height: 180px; /* Adjust card height for mobile */
+  }
+
+  .food-image {
+    width: 80px; /* Adjust image size on mobile */
+    height: 80px;
+  }
+  .popular-food {
+    padding: 0px 10px;
+    background-color: #ffffff; /* Light background */
+  }
+}
+
+/* Optional: For very small screens, you can further adjust the number of columns */
+@media (max-width: 480px) {
+  .food-items {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on very small screens */
+  }
+}

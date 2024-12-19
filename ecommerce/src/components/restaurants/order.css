@@ -1,0 +1,9 @@
+.main-canvas {
+    margin-top: 20px; /* Space below navbar */
+    padding: 20px;
+    min-height: calc(100vh - 60px); /* Adjust height minus navbar height */
+    background-color: transparent; /* White background for the main content */
+    max-width: 1200px; /* Content width limit */
+    margin-left: auto;
+    margin-right: auto; /* Center the canvas */
+  }
