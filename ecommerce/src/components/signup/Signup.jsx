@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import "./signup.css"
+import axios from 'axios';  // Ensure axios is imported
+import "./signup.css";
 
 const Signup = () => {
   const [name, setName] = useState('');
@@ -10,8 +11,21 @@ const Signup = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Your axios post logic here
-    navigate('/login');
+    
+    axios
+      .post('https://cravecure.onrender.com/user', { name, email, password })
+      .then((result) => {
+        console.log('Signup successful:', result.data);
+        navigate('/login');  // Navigate to login page after successful signup
+      })
+      .catch((err) => {
+        if (err.response && err.response.data.error === "Email already registered") {
+          alert("This email is already registered. Please use a different email.");
+        } else {
+          console.error('Error during signup:', err.response ? err.response.data : err);
+          alert("An error occurred during signup. Please try again.");
+        }
+      });
   };
 
   return (

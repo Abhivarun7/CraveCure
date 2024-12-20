@@ -9,7 +9,7 @@ function Dishes() {
     console.log(`Button clicked for category: ${category}`);
     try {
       console.log('Sending GET request to server...');
-      const response = await fetch(`http://localhost:3001/fetch-dishes/${category}`);
+      const response = await fetch(`https://cravecure.onrender.com/fetch-dishes/${category}`);
       console.log('Response received from server:', response.data);
 
       setDish(response.data); // Set dish data (name, image, rating)

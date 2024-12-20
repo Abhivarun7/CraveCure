@@ -28,7 +28,7 @@ const RestaurantDetails = ({ searchTerm = "" }) => {
           return;
         }
 
-        await axios.get("http://localhost:3001/api/auth/me", {
+        await axios.get("https://cravecure.onrender.com/api/auth/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -51,7 +51,7 @@ const RestaurantDetails = ({ searchTerm = "" }) => {
       }
 
       await axios.post(
-        "http://localhost:3001/api/auth/add-order",
+        "https://cravecure.onrender.com/api/auth/add-order",
         { order: cart },
         {
           headers: {
@@ -71,7 +71,7 @@ const RestaurantDetails = ({ searchTerm = "" }) => {
     const fetchRestaurantDetails = async () => {
       try {
         const response = await fetch(
-          `http://localhost:3001/api/restaurants/${id}`
+          `https://cravecure.onrender.com/api/restaurants/${id}`
         );
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);

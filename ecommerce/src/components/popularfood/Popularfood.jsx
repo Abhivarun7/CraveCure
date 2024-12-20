@@ -11,7 +11,7 @@ const Popularfood = ({ location }) => {
   useEffect(() => {
     const fetchCategories = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/food");
+        const response = await fetch("https://cravecure.onrender.com/api/food");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

@@ -22,7 +22,7 @@ const PrevOrders = () => {
     }
   
     try {
-      const response = await axios.get('http://localhost:3001/api/auth/prevorder', {
+      const response = await axios.get('https://cravecure.onrender.com/api/auth/prevorder', {
         headers: {
           Authorization: `Bearer ${token}`,
         },

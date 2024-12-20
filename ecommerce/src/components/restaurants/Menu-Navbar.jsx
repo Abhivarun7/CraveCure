@@ -19,7 +19,7 @@ const Navbar = ({ onSearch }) => {
           return;
         }
 
-        const response = await axios.get('http://localhost:3001/api/auth/me', {
+        const response = await axios.get('https://cravecure.onrender.com/api/auth/me', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },
@@ -63,7 +63,7 @@ const Navbar = ({ onSearch }) => {
       const token = localStorage.getItem("token");
       if (token) {
         await axios.post(
-          "http://localhost:3001/api/auth/logout",
+          "https://cravecure.onrender.com/api/auth/logout",
           {},
           {
             headers: {

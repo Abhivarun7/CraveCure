@@ -10,7 +10,7 @@ const Restaurants = ({ location }) => {
   useEffect(() => {
     const fetchRestaurants = async () => {
       try {
-        const response = await fetch("http://localhost:3001/api/restaurants");
+        const response = await fetch("https://cravecure.onrender.com/api/restaurants");
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

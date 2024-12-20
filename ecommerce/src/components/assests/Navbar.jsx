@@ -21,7 +21,7 @@ const Navbar = ({ onLocationChange, currentLocation, onSearchToggle, onSearch })
           return;
         }
 
-        const response = await axios.get("http://localhost:3001/api/auth/me", {
+        const response = await axios.get("https://cravecure.onrender.com/api/auth/me", {
           headers: {
             Authorization: `Bearer ${token}`,
           },

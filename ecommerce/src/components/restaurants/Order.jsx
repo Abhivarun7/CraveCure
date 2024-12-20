@@ -12,7 +12,7 @@ const Order = () => {
   useEffect(() => {
     const fetchRestaurantDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:3001/api/restaurants/${id}`);
+        const response = await fetch(`https://cravecure.onrender.com/api/restaurants/${id}`);
         if (!response.ok) {
           throw new Error('Error fetching restaurant details');
         }
