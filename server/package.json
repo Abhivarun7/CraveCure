@@ -5,6 +5,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5048a2bed62368aed1b5b2f82572c3f250a87be4
   },
   "keywords": [],
   "author": "",
@@ -22,6 +26,12 @@
     "nodemon": "^3.1.9"
   },
   "engines": {
+<<<<<<< HEAD
     "node": "20.x"
   }
+=======
+  "node": "20.x"
+}
+
+>>>>>>> 5048a2bed62368aed1b5b2f82572c3f250a87be4
 }
